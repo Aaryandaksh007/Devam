@@ -48,7 +48,7 @@ export default function ReportPage() {
     const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
     
     pdf.addImage(imgData, "JPEG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save(`LifeLens_Clinical_Report_${user?.name || "User"}.pdf`);
+    pdf.save(`LifeDrishti_Clinical_Report_${user?.name || "User"}.pdf`);
   };
 
   return (

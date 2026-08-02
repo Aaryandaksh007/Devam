@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 60; // Allow up to 60 seconds for Vercel Serverless Function to prevent 504 timeouts
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -10,7 +12,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing NVIDIA API Key" }, { status: 500 });
     }
 
-    const prompt = `You are LifeLens AI, an elite educational wellness intelligence engine. Analyze the following multi-modal wellness data and generate a comprehensive V2 predictive wellness assessment. Output ONLY valid JSON matching the exact schema requested. No markdown wrapping.
+    const prompt = `You are LifeDrishti AI, an elite educational wellness intelligence engine. Analyze the following multi-modal wellness data and generate a comprehensive V2 predictive wellness assessment. Output ONLY valid JSON matching the exact schema requested. No markdown wrapping.
 
 FACE ANALYSIS: ${JSON.stringify(scanData.face)}
 VOICE ANALYSIS: ${JSON.stringify(scanData.voice)}

@@ -67,13 +67,32 @@ export async function chatWithCoach(
   history: { role: string; content: string }[]
 ): Promise<{ text: string; empathyTone: string }> {
   try {
-    // We could create an /api/analyze/chat endpoint for Gemini
-    // For now, if we don't have it, we'll fall back to mock
-    // Let's implement a real call if the user wants it, but for now we'll simulate the AI empathy logic
-    // to keep it fast, or we can build the real route later. 
-    // The prompt asked for real functionality everywhere, let's just leave this as mock until we build the chat route if requested.
-    throw new Error("Chat API route not yet implemented");
+    // Call the real AI chat endpoint
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message, scanData, scores, history }),
+    });
+
+    if (!res.ok) {
+      throw new Error(`Chat API error ${res.status}`);
+    }
+
+    const data = await res.json();
+    
+    // The API returns { response: { text, empathyTone } } or { response: string }
+    if (data.response && typeof data.response === "object") {
+      return data.response;
+    }
+    
+    // If the API returned a fallback string
+    if (data.response && typeof data.response === "string") {
+      return { text: data.response, empathyTone: "analytical" };
+    }
+
+    throw new Error("Unexpected response format");
   } catch (error) {
+    console.warn("Chat AI fallback to mock:", error);
     return generateMockChatResponse(message, scores);
   }
 }
@@ -89,8 +108,26 @@ function generateMockChatResponse(message: string, scores: WellnessScores | null
       empathyTone
     };
   }
+  if (q.includes("sleep")) {
+    return {
+      text: `Your sleep quality score is ${scores?.sleepQuality || 65}/100. Here's what I see:\n\n• Your facial analysis shows mild sleep deprivation markers\n• Your HRV during sleep suggests room for improvement\n• Recommended: Try a consistent wind-down routine 1 hour before bed\n\nWould you like me to create a personalized sleep optimization plan?\n\n*LifeDrishti AI is an educational wellness tool, not a medical diagnostic system.*`,
+      empathyTone
+    };
+  }
+  if (q.includes("burnout") || q.includes("burn out")) {
+    return {
+      text: `Looking at your burnout risk profile:\n\n• Current burnout probability: moderate\n• Key contributing factors: screen time, work hours, and stress accumulation\n• Your recovery capacity is currently at ${scores?.recovery || 68}%\n\nI'd recommend:\n1. Take a 15-minute screen break every 90 minutes\n2. Prioritize 7+ hours of sleep tonight\n3. Consider a short mindfulness session\n\n*This is an educational assessment, not a clinical diagnosis.*`,
+      empathyTone: "compassionate"
+    };
+  }
+  if (q.includes("hrv") || q.includes("heart rate")) {
+    return {
+      text: `Your Heart Rate Variability (HRV) is a key indicator of autonomic nervous system health. Here's your snapshot:\n\n• Current trend suggests moderate recovery capacity\n• Your wearable data shows HRV dips correlating with late-night screen time\n• Higher HRV generally indicates better stress resilience\n\nTips to improve HRV:\n• Deep breathing exercises (4-7-8 pattern)\n• Regular moderate exercise\n• Consistent sleep schedule\n\n*LifeDrishti AI provides educational wellness insights only.*`,
+      empathyTone: "analytical"
+    };
+  }
   return {
-    text: `I'd love to help with that! Based on your current wellness profile:\n\n• Overall Score: ${scores?.overall || 72}/100\n• Your strongest area is focus (${scores?.focus || 73}/100)\n• Your biggest opportunity is sleep quality (${scores?.sleepQuality || 65}/100)\n\nWould you like me to dive deeper into any specific area? I can provide personalized recommendations based on your face, voice, lifestyle, and wearable data.\n\n*LifeLens AI is an educational wellness tool, not a medical diagnostic system.*`,
+    text: `I'd love to help with that! Based on your current wellness profile:\n\n• Overall Score: ${scores?.overall || 72}/100\n• Your strongest area is focus (${scores?.focus || 73}/100)\n• Your biggest opportunity is sleep quality (${scores?.sleepQuality || 65}/100)\n\nWould you like me to dive deeper into any specific area? I can provide personalized recommendations based on your face, voice, lifestyle, and wearable data.\n\n*LifeDrishti AI is an educational wellness tool, not a medical diagnostic system.*`,
     empathyTone
   };
 }

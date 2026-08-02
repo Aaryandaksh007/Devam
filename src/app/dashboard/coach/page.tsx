@@ -105,7 +105,7 @@ export default function CoachPage() {
             </div>
           </div>
           <p className="text-xs text-muted-foreground leading-relaxed">
-             LifeLens continuously adapts its conversational tone and UI aesthetics based on your real-time physiological stress and vocal fatigue markers.
+             LifeDrishti continuously adapts its conversational tone and UI aesthetics based on your real-time physiological stress and vocal fatigue markers.
           </p>
         </GlassCard>
 
@@ -155,7 +155,7 @@ export default function CoachPage() {
               <div className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-background" />
             </div>
             <div>
-              <h2 className="font-semibold text-sm">LifeLens Coach</h2>
+              <h2 className="font-semibold text-sm">LifeDrishti Coach</h2>
               <p className="text-xs text-muted-foreground flex items-center gap-1">
                 <HeartPulse className="w-3 h-3 text-rose-400 animate-pulse" /> Live Telemetry Linked
               </p>

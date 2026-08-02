@@ -265,7 +265,7 @@ export const DEMO_ACHIEVEMENTS: Achievement[] = [
   { id: "ach-6", title: "Week Warrior", description: "Maintain a 7-day streak", icon: "🔥", unlocked: true, unlockedAt: new Date(Date.now() - 604800000).toISOString(), xpReward: 300, category: "streak" },
   { id: "ach-7", title: "Recovery Champion", description: "Reach recovery score of 90+", icon: "💚", unlocked: false, xpReward: 350, category: "wellness" },
   { id: "ach-8", title: "Perfect Sleep", description: "Sleep 8+ hours for 3 nights straight", icon: "😴", unlocked: false, xpReward: 200, category: "challenge" },
-  { id: "ach-9", title: "Wellness Explorer", description: "Use every feature of LifeLens AI", icon: "🧭", unlocked: false, xpReward: 500, category: "milestone" },
+  { id: "ach-9", title: "Wellness Explorer", description: "Use every feature of LifeDrishti AI", icon: "🧭", unlocked: false, xpReward: 500, category: "milestone" },
   { id: "ach-10", title: "Month Master", description: "Maintain a 30-day streak", icon: "👑", unlocked: false, xpReward: 1000, category: "streak" },
 ];
 
@@ -335,7 +335,7 @@ export const DEMO_WEEKLY_REPORT: WeeklyReport = {
 export const DEMO_USER: UserProfile = {
   id: "demo-user-1",
   name: "Alex Chen",
-  email: "alex@lifelens.demo",
+  email: "alex@lifedrishti.demo",
   age: 28,
   gender: "male",
   joinedAt: new Date(Date.now() - 2592000000).toISOString(),

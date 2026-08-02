@@ -17,6 +17,7 @@ import {
 interface LifeLensState {
   isAuthenticated: boolean;
   isDemo: boolean;
+  isDemoMode: boolean;
   user: UserProfile | null;
   scanStep: ScanStep;
   scanData: ScanData;
@@ -65,6 +66,7 @@ interface LifeLensState {
 const initialState = {
   isAuthenticated: false,
   isDemo: false,
+  isDemoMode: false,
   user: null,
   scanStep: "face" as ScanStep,
   scanData: {},
@@ -108,6 +110,7 @@ export const useStore = create<LifeLensState>()(
         set({
           isAuthenticated: true,
           isDemo: true,
+          isDemoMode: true,
           user: DEMO_USER,
           scanStep: "complete",
           scanData: DEMO_SCAN_DATA,
@@ -127,7 +130,7 @@ export const useStore = create<LifeLensState>()(
             {
               id: "welcome",
               role: "assistant",
-              content: "Hello Alex! 👋 I'm your LifeLens AI Coach. I've analyzed your latest wellness data and I'm ready to help you understand your health signals. Ask me anything about your sleep, stress, activity, or any wellness topic!",
+              content: "Hello Alex! 👋 I'm your LifeDrishti AI Coach. I've analyzed your latest wellness data and I'm ready to help you understand your health signals. Ask me anything about your sleep, stress, activity, or any wellness topic!",
               timestamp: new Date().toISOString(),
             },
           ],
@@ -149,12 +152,12 @@ export const useStore = create<LifeLensState>()(
 
       setProcessing: (isProcessing) => set({ isProcessing }),
 
-      setDemoMode: (isDemo) => {
-        if (isDemo) {
-          set({ isDemoMode: true });
+      setDemoMode: (demo) => {
+        if (demo) {
+          set({ isDemo: true, isDemoMode: true });
           get().loadDemo();
         } else {
-          set({ isDemoMode: false, ...initialState, isAuthenticated: true, user: get().user });
+          set({ isDemo: false, isDemoMode: false, ...initialState, isAuthenticated: true, user: get().user });
         }
       },
 

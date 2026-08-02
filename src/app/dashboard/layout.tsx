@@ -36,7 +36,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center">
               <Eye className="w-4 h-4 text-white" />
             </div>
-            <span className="text-lg font-bold text-gradient-primary">LifeLens AI</span>
+            <span className="text-lg font-bold text-gradient-primary">LifeDrishti AI</span>
             {isDemo && <Badge variant="warning" className="text-[10px] px-1.5 py-0">Demo</Badge>}
           </div>
 

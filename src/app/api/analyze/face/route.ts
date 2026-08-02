@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 60; // Allow up to 60 seconds for Vercel Serverless Function to prevent 504 timeouts
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();

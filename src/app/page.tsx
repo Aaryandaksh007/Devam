@@ -64,7 +64,7 @@ export default function LandingPage() {
             <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center">
               <Eye className="w-4 h-4 text-white" />
             </div>
-            <span className="text-lg font-bold text-gradient-primary">LifeLens AI</span>
+            <span className="text-lg font-bold text-gradient-primary">LifeDrishti AI</span>
           </motion.div>
 
           <motion.div
@@ -119,7 +119,7 @@ export default function LandingPage() {
               custom={2}
               className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             >
-              LifeLens AI creates your personal wellness twin by combining facial signals, voice patterns, 
+              LifeDrishti AI creates your personal wellness twin by combining facial signals, voice patterns, 
               lifestyle habits, and wearable data into one intelligent, explainable AI engine.
             </motion.p>
 
@@ -229,7 +229,7 @@ export default function LandingPage() {
               <span className="text-gradient-primary">Multi-Modal</span> AI Intelligence
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We don't just look at one signal. LifeLens combines multiple everyday data streams 
+              We don't just look at one signal. LifeDrishti combines multiple everyday data streams 
               into one holistic wellness picture.
             </motion.p>
           </motion.div>
@@ -274,7 +274,7 @@ export default function LandingPage() {
             className="text-center mb-20"
           >
             <motion.h2 variants={fadeUp} custom={0} className="text-4xl sm:text-5xl font-bold mb-4">
-              How <span className="text-gradient-primary">LifeLens</span> Works
+              How <span className="text-gradient-primary">LifeDrishti</span> Works
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Four simple steps to unlock your personal AI wellness twin.
@@ -324,7 +324,7 @@ export default function LandingPage() {
                   Explainable <span className="text-gradient-primary">AI Engine</span>
                 </motion.h2>
                 <motion.p variants={fadeUp} custom={1} className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Every prediction explains WHY. No black boxes. LifeLens shows contributing factors, 
+                  Every prediction explains WHY. No black boxes. LifeDrishti shows contributing factors, 
                   confidence levels, supporting data, and actionable improvement suggestions.
                 </motion.p>
                 <motion.div variants={fadeUp} custom={2} className="space-y-4">
@@ -444,7 +444,7 @@ export default function LandingPage() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {[
-              { name: "Dr. Sarah Kim", role: "Wellness Researcher", quote: "LifeLens makes preventive health accessible and engaging. The multi-modal approach is genuinely innovative.", stars: 5 },
+              { name: "Dr. Sarah Kim", role: "Wellness Researcher", quote: "LifeDrishti makes preventive health accessible and engaging. The multi-modal approach is genuinely innovative.", stars: 5 },
               { name: "Marcus T.", role: "Software Engineer", quote: "The AI coach actually references my real data. It's not generic advice — it's personalized and actionable.", stars: 5 },
               { name: "Priya N.", role: "Graduate Student", quote: "The gamification keeps me coming back. I've improved my sleep by 1.5 hours just by following the daily missions.", stars: 5 },
             ].map((t, i) => (
@@ -504,10 +504,10 @@ export default function LandingPage() {
             <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center">
               <Eye className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="font-bold text-gradient-primary">LifeLens AI</span>
+            <span className="font-bold text-gradient-primary">LifeDrishti AI</span>
           </div>
           <p className="text-xs text-muted-foreground/50 text-center">
-            Educational wellness assistant · Not a medical diagnostic system · © {new Date().getFullYear()} LifeLens AI
+            Educational wellness assistant · Not a medical diagnostic system · © {new Date().getFullYear()} LifeDrishti AI
           </p>
           <div className="flex gap-4 text-xs text-muted-foreground/40">
             <span className="hover:text-foreground cursor-pointer transition-colors">Privacy</span>

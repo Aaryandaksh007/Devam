@@ -77,7 +77,7 @@ Ensure robust cross-referencing between modalities.`;
         "Authorization": `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "meta/llama-3.1-70b-instruct",
+        model: "meta/llama-3.1-8b-instruct",
         messages: [{ role: "user", content: prompt }],
         temperature: 0.5,
         max_tokens: 4096,

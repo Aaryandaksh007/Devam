@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
         "Authorization": `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "meta/llama-3.2-90b-vision-instruct",
+        model: "meta/llama-3.2-11b-vision-instruct",
         messages: [
           {
             role: "user",

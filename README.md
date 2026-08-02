@@ -1,10 +1,12 @@
-# LifeLens AI 🔬
+# LifeDrishti AI 🔬
 
 > **"See Your Health Before You Feel It."**
 
-LifeLens AI is a multi-modal AI wellness twin that creates personalized, preventive health insights by combining facial appearance, voice patterns, lifestyle habits, and wearable metrics into one explainable AI engine.
+🌍 **Live Demo:** [https://lifedrishti-ai.vercel.app/](https://lifedrishti-ai.vercel.app/)
 
-⚠️ **LifeLens AI is an educational wellness assistant, NOT a medical diagnostic system.**
+LifeDrishti AI is a multi-modal AI wellness twin that creates personalized, preventive health insights by combining facial appearance, voice patterns, lifestyle habits, and wearable metrics into one explainable AI engine.
+
+⚠️ **LifeDrishti AI is an educational wellness assistant, NOT a medical diagnostic system.**
 
 ---
 
@@ -103,4 +105,4 @@ Key things to notice:
 
 MIT — Built for hackathon demonstration purposes.
 
-**LifeLens AI does not diagnose diseases or recommend medications. Always consult a qualified healthcare professional for medical advice.**
+**LifeDrishti AI does not diagnose diseases or recommend medications. Always consult a qualified healthcare professional for medical advice.**

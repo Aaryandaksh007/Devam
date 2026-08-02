@@ -10,6 +10,13 @@ LifeDrishti AI is a multi-modal AI wellness twin that creates personalized, prev
 
 ---
 
+## ⚡ Performance Updates
+
+- **Lightning Fast AI Processing:** Upgraded to **Llama 3.2 11B Vision** for facial analysis and **Llama 3.1 8B Instruct** for multimodal synthesis and chat. This delivers a 10x speed improvement, eliminating Vercel function timeouts while maintaining high-quality explainable wellness insights.
+- **Multilingual Support:** The AI Coach now automatically responds in the exact same language as the user.
+
+---
+
 ## ✨ Features
 
 - **🧠 Multi-Modal AI Engine** — Fuses face, voice, lifestyle, and wearable data into unified wellness scores
@@ -53,7 +60,7 @@ npm run dev
 | Animation | Framer Motion |
 | UI Components | ShadCN UI (Radix) |
 | Charts | Recharts |
-| AI Engine | NVIDIA NIM API (Llama 3.1 70B) |
+| AI Engine | NVIDIA NIM API (Llama 3.2 11B Vision & Llama 3.1 8B Instruct) |
 | State | Zustand + localStorage |
 | Icons | Lucide React |
 

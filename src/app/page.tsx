@@ -107,7 +107,7 @@ export default function LandingPage() {
             <motion.h1
               variants={fadeUp}
               custom={1}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95]"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold tracking-tight leading-[1.02]"
             >
               <span className="text-gradient-primary">See Your Health</span>
               <br />
@@ -242,16 +242,16 @@ export default function LandingPage() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {[
-              { icon: Eye, title: "Face Analysis", desc: "Estimate stress, fatigue, hydration and wellness signals from facial appearance", color: "from-cyan-400 to-blue-500", glow: "cyan" as const },
-              { icon: Mic, title: "Voice Intelligence", desc: "Analyze stress, energy, confidence and mood patterns from your voice", color: "from-violet-400 to-purple-500", glow: "violet" as const },
+              { icon: Eye, title: "Face Analysis", desc: "Estimate stress, fatigue, hydration and wellness signals from facial appearance", color: "from-cyan-400 to-blue-500", glow: "cyan" as con[...]
+              { icon: Mic, title: "Voice Intelligence", desc: "Analyze stress, energy, confidence and mood patterns from your voice", color: "from-violet-400 to-purple-500", glow: "violet" as con[...]
               { icon: Heart, title: "Wearable Sync", desc: "Heart rate, HRV, sleep, steps, SpO2 — all in one unified view", color: "from-rose-400 to-pink-500", glow: "none" as const },
-              { icon: Activity, title: "Lifestyle Tracking", desc: "Sleep, exercise, diet, screen time, and habits feed the AI engine", color: "from-emerald-400 to-green-500", glow: "teal" as const },
-              { icon: MessageCircle, title: "AI Wellness Coach", desc: "Conversational assistant that answers using YOUR actual data", color: "from-amber-400 to-orange-500", glow: "none" as const },
-              { icon: Target, title: "Future Predictions", desc: "See tomorrow's energy, stress forecasts, and recovery projections", color: "from-indigo-400 to-blue-500", glow: "violet" as const },
+              { icon: Activity, title: "Lifestyle Tracking", desc: "Sleep, exercise, diet, screen time, and habits feed the AI engine", color: "from-emerald-400 to-green-500", glow: "teal" as con[...]
+              { icon: MessageCircle, title: "AI Wellness Coach", desc: "Conversational assistant that answers using YOUR actual data", color: "from-amber-400 to-orange-500", glow: "none" as const[...]
+              { icon: Target, title: "Future Predictions", desc: "See tomorrow's energy, stress forecasts, and recovery projections", color: "from-indigo-400 to-blue-500", glow: "violet" as const[...]
             ].map((feature, i) => (
               <motion.div key={feature.title} variants={fadeUp} custom={i}>
                 <GlassCard glow={feature.glow} className="h-full group cursor-default">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hove[...]
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
@@ -444,7 +444,7 @@ export default function LandingPage() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {[
-              { name: "Dr. Sarah Kim", role: "Wellness Researcher", quote: "LifeDrishti makes preventive health accessible and engaging. The multi-modal approach is genuinely innovative.", stars: 5 },
+              { name: "Dr. Sarah Kim", role: "Wellness Researcher", quote: "LifeDrishti makes preventive health accessible and engaging. The multi-modal approach is genuinely innovative.", stars:[...]
               { name: "Marcus T.", role: "Software Engineer", quote: "The AI coach actually references my real data. It's not generic advice — it's personalized and actionable.", stars: 5 },
               { name: "Priya N.", role: "Graduate Student", quote: "The gamification keeps me coming back. I've improved my sleep by 1.5 hours just by following the daily missions.", stars: 5 },
             ].map((t, i) => (
